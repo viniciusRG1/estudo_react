@@ -1,6 +1,14 @@
 
 import './App.css';
 
+import Events from './components/Events';
+
+import First from './components/FirstComponent';
+
+import TemplateExpressions from './components/TemplateExpressions';
+
+import FComponent from './components/Component';
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +18,10 @@ function App() {
         amo programar
       </p>
       </div>
+      <FComponent/>
+      <First/>
+      <TemplateExpressions/>
+      <Events/>
     </div>
   );
 }

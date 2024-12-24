@@ -32,6 +32,8 @@ import { useState } from 'react';
 import Message from './components/Message';
 import ChangeMessageState from './components/ChangeMessageState';
 import UserDetails from './components/UserDetails';
+import ComponentCss from './components/ComponentCss';
+import Title from './components/Title';
 
 function App() {
 
@@ -47,6 +49,10 @@ function App() {
     {nome: "ana laura", idade: 21, profissao:"fisioterapeuta"},
     {nome: "joão miguel", idade: 15, profissao:"estudante"},
   ]
+
+const n = Math.floor(Math.random() * 10)+5;
+
+const TitleDinamic = Math.random() < 0.5
 
 const [message, setMessage] = useState("");
 
@@ -80,9 +86,6 @@ function showMessage(){
       <ListRender/>
       <ConditionalRender/>
       <ShowUserName name="cazé"/>
-      <CarDetails brand="UNO " km={100} color="BRANCO " novo = {true} />
-      <CarDetails brand="FIESTA " km={200} color="LARANJA " novo = {true}/>
-      <CarDetails brand="HB20 " km={300} color="PRATA " novo = {false}/>
       {car.map((car) => (
         <CarDetails key={car.id} brand={car.brand} km={car.km} color={car.color} novo={car.novo}/>
       ))}
@@ -96,6 +99,11 @@ function showMessage(){
       {pessoas.map((pessoas) => (
         <UserDetails nome={pessoas.nome} idade={pessoas.idade} job={pessoas.profissao} />
       ))}
+      <ComponentCss />
+      <p style={{color: "blue", padding:"30px", background:"gold"}}>inline</p>
+      <h2 style={n < 10 ? {color: "silver"} : {color:"red"}}>dinamic Css</h2>
+      <h2 className={TitleDinamic ? "blue_title" : "red_title"}>dinamic class</h2>
+      <Title/>
     </div>   
   );
 }

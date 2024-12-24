@@ -6,9 +6,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding-bottom: 500px;
+  margin: 0;
+  padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h2{
+  color: #03481f;
+}
+
+.blue_title{
+  background: black;
+  color: blue;
+}
+
+.red_title{
+  background: black;
+  color: red;
 }

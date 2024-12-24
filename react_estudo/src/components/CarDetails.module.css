@@ -1,0 +1,20 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.Ferrari{
+    background: red;
+    color: white;
+}
+
+.Audi{
+    background: black;
+    color: white;
+}
+
+.Jeep{
+    background: white;
+    color: pink;
+}
+

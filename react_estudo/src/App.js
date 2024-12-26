@@ -34,6 +34,7 @@ import ChangeMessageState from './components/ChangeMessageState';
 import UserDetails from './components/UserDetails';
 import ComponentCss from './components/ComponentCss';
 import Title from './components/Title';
+import My_form from './components/MyForm';
 
 function App() {
 
@@ -104,6 +105,7 @@ function showMessage(){
       <h2 style={n < 10 ? {color: "silver"} : {color:"red"}}>dinamic Css</h2>
       <h2 className={TitleDinamic ? "blue_title" : "red_title"}>dinamic class</h2>
       <Title/>
+      <My_form user={{name: "vinicius", email:"vinicius@vinicius.vinicius", bio:"sexo", role:"admin"}}/>
     </div>   
   );
 }
